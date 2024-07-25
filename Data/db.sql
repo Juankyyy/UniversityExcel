@@ -1,3 +1,4 @@
+-- Active: 1721868051215@@bm3xnn3ofdxscr0uo078-mysql.services.clever-cloud.com@3306@bm3xnn3ofdxscr0uo078
 CREATE TABLE Students (
     Id INT PRIMARY KEY AUTO_INCREMENT,
     Name VARCHAR(100) NOT NULL,
