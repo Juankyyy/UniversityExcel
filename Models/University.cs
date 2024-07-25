@@ -10,6 +10,6 @@ namespace University.Models
         public string Name { get; set; }
 
         [Required]
-        public string Dean { get; set; }
+        public string DeanName { get; set; }
     }
 }
