@@ -11,11 +11,14 @@ namespace University.Models
 
         [Required]
         public int StudentId { get; set; }
+        public Student? Student { get; set; }
 
         [Required]
         public int UniversityId { get; set; }
+        public Universities? University { get; set; }
 
         [Required]
         public int CareerId { get; set; }
+        public Career? Career { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace University.Models
 {
@@ -9,16 +10,12 @@ namespace University.Models
         [Required]
         public string Name { get; set; }
 
-        // [Required]
-        // public string Semester { get; set; }
-
-        // [Required]
-        // public string Year { get; set; }
-
-        [Required]
-        public int SubjectId { get; set; }
-
         [Required]
         public int UniversityId { get; set; }
+        public Universities? University { get; set; }
+
+        [JsonIgnore]
+        public List<Inscription>? Inscriptions { get; set; }
+        public List<Subject>? Subjects { get; set; }
     }
 }

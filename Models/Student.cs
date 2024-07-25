@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace University.Models
 {
@@ -17,5 +18,8 @@ namespace University.Models
 
         [Required]
         public string Phone { get; set; }
+
+        [JsonIgnore]
+        public List<Inscription>? Inscriptions { get; set; }
     }
 }
