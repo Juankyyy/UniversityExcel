@@ -151,7 +151,7 @@ namespace University.Controllers
             try
             {
                 var titleFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 20, Font.NORMAL, BaseColor.BLACK);
-                var boldFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12, Font.NORMAL, BaseColor.WHITE);
+                var boldFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12, Font.NORMAL, BaseColor.BLACK);
                 var errorFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 18, Font.NORMAL, BaseColor.RED);
                 
                 var student = _context.Students.Find(id);
@@ -202,10 +202,11 @@ namespace University.Controllers
 
                     foreach (var subject in subjects)
                     {
-                        document.Add(new Paragraph(subject.Name, boldFont));
+                        document.Add(new Paragraph(subject.Name));
                         
                         document.Add(new Paragraph("Profesor: " + subject.Teacher.Name));
                         document.Add(new Paragraph($"Semestre: {subject.Semester.Year} - {subject.Semester.SemesterNumber}"));
+                        document.Add(new Paragraph(" ", boldFont));
                     }
                 }
             } catch (Exception e)
