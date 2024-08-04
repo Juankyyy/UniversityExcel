@@ -1,7 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using University.Models;
-using University.Services;
 using University.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,14 +10,11 @@ public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
 
-    private readonly IEmailRepository _emailRepository;
-
     private readonly UniversityContext _context;
 
-    public HomeController(ILogger<HomeController> logger, IEmailRepository emailRepository, UniversityContext context)
+    public HomeController(ILogger<HomeController> logger, UniversityContext context)
     {
         _logger = logger;
-        _emailRepository = emailRepository;
         _context = context;
     }
 

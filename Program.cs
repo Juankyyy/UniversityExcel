@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using University.Data;
-using University.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
